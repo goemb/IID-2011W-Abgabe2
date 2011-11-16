@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Timemanager</title>
+<!-- include the Tools -->
+<script src="http://cdn.jquerytools.org/1.2.6/full/jquery.tools.min.js"></script>
+<style>
+#hg {
+	position:relative;
+	height: 580px;
+	background-image: url("img/layout.png");
+	background-repeat: no-repeat;
+	background-size: 60% auto;
+	overflow-y: hidden;
+	overflow-x: hidden;
+}
+
+#header {
+	position:relative;
+	height:140px;
+	border-bottom: 2px solid black;
+}
+
+
+
+
+#list{
+	position: relative;
+	top: 0px;
+	left: 200px;
+	
+	
+
+}
+body {
+	font-family: "Trebuchet MS", Helvetica, Jamrul, sans-serif;
+}
+
+table {
+	font-size:11px;
+	
+}
+
+.apple_overlay { /* initially overlay is hidden */
+	display: none;
+	/* growing background image */
+	background-image: url(../img/overlay/white.png);
+	/* 
+		width after the growing animation finishes
+		height is automatically calculated
+	*/
+	width: 340px;
+	/* some padding to layout nested elements nicely  */
+	padding: 35px;
+	/* a little styling */
+	font-size: 11px;
+}
+
+/* default close button positioned on upper right corner */
+.apple_overlay .close {
+	background-image: url(img/close.png);
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	cursor: pointer;
+	height: 35px;
+	width: 35px;
+}
+
+.bla_overlay { /* initially overlay is hidden */
+	display: none;
+	/* growing background image */
+	background-image: url(../img/overlay/white.png);
+	/* 
+		width after the growing animation finishes
+		height is automatically calculated
+	*/
+	width: 440px;
+	/* some padding to layout nested elements nicely  */
+	padding: 35px;
+	/* a little styling */
+	font-size: 11px;
+}
+
+/* default close button positioned on upper right corner */
+.bla_overlay .close {
+	background-image: url(img/close.png);
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	cursor: pointer;
+	height: 35px;
+	width: 35px;
+}
+
+#custom {
+	background-image:
+		url(http://static.flowplayer.org/img/commerce/box-512.png);
+	width: 512px;
+	height: 531px;
+	padding: 0px;
+}
+
+#custom div.close {
+	right: -15px;
+	top: -10px;
+}
+
+#petrol {
+	background-image:
+		url(http://static.flowplayer.org/img/overlay/petrol.png);
+	color: #000;
+}
+
+#apple {
+	background-image:
+		url(http://static.flowplayer.org/img/overlay/white.png);
+	color: #000;
+	padding: 50px 70px;
+}
+
+#bla {
+	background-image:
+		url(http://static.flowplayer.org/img/overlay/apple.png);
+	color: #fff;
+	padding: 50px 70px;
+}
+</style>
+</head>
+
+<body>
+
+<div id="hg">
+
+<div id="header"> </div>
+
+<div id="list">
+	<h1>Timermanager 2.0</h1>
+	
+	<h2>Projektliste</h2>
+	<table border="1" cellspacing="3px" cellpadding="3px" style="border-spacing:0pt;">
+	<tr style="font-weight:bold;">
+	<td>Projekt </td>
+	<td>max. Stunden </td>
+	<td>aktuelle Stunden </td>
+	</tr>
+	<tr>
+	<td>Projekt 1</td>
+	<td>150.00 </td>
+	<td>24.25 </td>
+	</tr>
+	<tr>
+	<td>Projekt 2</td>
+	<td>10.00 </td>
+	<td>2.00 </td>
+	</tr>
+	<tr>
+	<td>Projekt 3</td>
+	<td>400.50 </td>
+	<td>135.00 </td>
+	</tr>
+	<tr>
+	<td>Projekt 4</td>
+	<td>50.00 </td>
+	<td>14.55 </td>
+	</tr>
+	</table>
+	<!-- overlay triggers. overlay is referenced in the 'rel' attribute -->
+	<p>
+		<button rel="#apple" type="button">Neues Projekt</button>
+		<button rel="#bla" type="button">Zeiterfassung</button>
+	</p>
+</div>
+
+<div class="apple_overlay" id="apple">
+		<form id="formular" action="" method="post">
+
+			<fieldset>
+				<legend>Neues Projekt anlegen</legend>
+				<table>
+					<tr>
+						<td>Projektname</td>
+						<td><input type="text" class="text" name="name" id="name"
+							value="Projektname">
+						</td>
+					</tr>
+					<tr>
+						<td>Kunde</td>
+						<td><input type="text" class="text" name="kunde" id="kunde"
+							value="Kunde">
+						</td>
+					</tr>
+					<tr>
+						<td>Stundensatz</td>
+						<td><input type="text" class="text" name="name"
+							id="stundensatz" value="20.00">
+						</td>
+						<td>Euro</td>
+					</tr>
+					<tr>
+						<td>max. Anzahl an Stunden</td>
+						<td><input type="text" class="text" name="name" id="stunden"
+							value="35.00">
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td align="right"><input type="reset" value="Reset"><input
+							type="submit" value="Submit">
+						</td>
+					</tr>
+				</table>
+			</fieldset>
+		</form>
+	</div>
+	
+	<div class="bla_overlay" id="bla">
+		<form id="formular" action="" method="post">
+
+			<fieldset>
+				<legend>Arbeitszeit eintragen</legend>
+				<table>
+					<tr>
+						<td>Projektname</td>
+						<td><input type="text" class="text" name="name" id="name"
+							value="Projektname">
+						</td>
+					</tr>
+					<tr>
+						<td>Kunde</td>
+						<td><input type="text" class="text" name="kunde" id="kunde"
+							value="Kunde">
+						</td>
+					</tr>
+					<tr>
+						<td>Stundensatz</td>
+						<td><input type="text" class="text" name="name"
+							id="stundensatz" value="20.00">
+						</td>
+						<td>Euro</td>
+					</tr>
+					<tr>
+						<td>max. Anzahl an Stunden</td>
+						<td><input type="text" class="text" name="name" id="stunden"
+							value="35.00">
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td align="right"><input type="reset" value="Reset"><input
+							type="submit" value="Submit">
+						</td>
+					</tr>
+				</table>
+			</fieldset>
+		</form>
+	</div>
+
+
+</div>
+
+	
+
+
+	<!-- each overlay is initialized with this single JavaScript call -->
+	<script>
+		$(function() {
+			$("button[rel]").overlay({
+				mask : '#000',
+				effect : 'apple'
+			});
+		});
+	</script>
+
+	
+</body>
+
+</html>
