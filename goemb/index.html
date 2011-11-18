@@ -1,0 +1,376 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Time Managed!</title>
+
+<link rel="stylesheet" href="css/blueprint/screen.css" type="text/css" media="screen, projection">
+<link rel="stylesheet" href="css/blueprint/print.css" type="text/css" media="print">
+
+<script src="http://cdn.jquerytools.org/1.2.6/full/jquery.tools.min.js"></script>
+
+<script>
+$(function() {
+	$("button[rel]").overlay({
+		mask : '#000',
+		effect : 'apple'
+	});
+});
+</script>
+
+<style type="text/css">
+body{background:#e4e4e4;color:black;font-family:verdana,sans-serif;}
+
+.kopf_hintergrund{background:#4e4e4e;width:100%;height:60px;}
+.kopf{width:900px;margin:0 auto;}
+.timey{font-variant:small-caps;font-size:3em;float:left;letter-spacing:0.25em;color:#ef9c17;}
+.because{font-size:1.2em;float:left;margin-left:1em;margin-top:1.7em;color:#1e1e1e;}
+
+.navigation{position:fixed;top:160px;left:40px;width:80px;height:300px;}
+.home:hover{background:#ead7aa;}
+.home{background:white;height:65px;width:65px;border-radius:15px;-moz-border-radius:15px;margin:0 auto auto auto;border-style:dotted;border-width:2px;border-color:#b7b7b7;}
+.homebutton{margin:7px auto auto 10px;}
+.zeit:hover{background:#ead7aa;}
+.zeit{height:65px;width:65px;border-radius:15px;-moz-border-radius:15px;margin:9px auto auto auto;border-style:dotted;border-width:2px;border-color:#b7b7b7;}
+.zeitbutton{margin:7px auto auto 1px;}
+.statistik:hover{background:#ead7aa;}
+.statistik{height:65px;width:65px;border-radius:15px;-moz-border-radius:15px;margin:9px auto auto auto;border-style:dotted;border-width:2px;border-color:#b7b7b7;}
+.statistikbutton{margin:7px auto auto 2px;}
+.rechnung:hover{background:#ead7aa;}
+.rechnung{height:65px;width:65px;border-radius:15px;-moz-border-radius:15px;margin:9px auto auto auto;border-style:dotted;border-width:2px;border-color:#b7b7b7;}
+.rechnungbutton{margin:4px auto auto 2px;}
+
+.inhalt_bereich{width:950px;height:570px;background:white;margin:3em auto auto auto;border-radius:15px;-moz-border-radius:15px;}
+.leiste_oben{width:100%;height:30px;}
+.leiste_oben_projekte{float:left;margin:7px auto auto 25px;font:bold 150% 'helvetica neue';}
+.inhalt{width:99%;height:510px;margin:0 auto;overflow:scroll;}
+.leiste_unten{width:100%;height:30px;}
+.neu_button{float:left;margin:3px auto auto 25px;}
+.neu_tabelle{position:absolute;left:50px;top:110px;}
+
+.footer{width:100%}
+.copyright{text-align:center;margin-top:5px;color:#b7b7b7;}
+
+.neu_overlay {
+	display: none;
+	width: 440px;
+	padding: 35px;
+	font-size: 11px;
+}
+.neu_overlay .close {
+	background-image: url(img/close.png);
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	cursor: pointer;
+	height: 35px;
+	width: 35px;
+}
+#neu {
+	background-image:url(img/form.png);
+	padding: 50px 70px;
+}
+
+.specialtable tr:nth-child(even) td, tbody tr.even td {background:#fff3d6;}
+</style>
+</head>
+<body>
+	<div class="kopf_hintergrund">
+		<div class="kopf">
+			<div class="timey">Timey!</div><div class="because">because time matters</div>
+		</div>
+	</div>
+	
+	<div class="navigation">
+		<a href="index.html">
+		<div class="home">
+			<img class="homebutton" src="img/home.png" height="60px">
+		</div>
+		</a>
+		<a href="zeit.html">
+		<div class="zeit">
+			<img class="zeitbutton" src="img/zeit2.png" height="60px">
+		</div>
+		</a>
+		<a href="statistik.html">
+		<div class="statistik">
+			<img class="statistikbutton" src="img/statistik2.png" height="60px">
+		</div>
+		</a>
+		<a href="rechnung.html">
+		<div class="rechnung">
+			<img class="rechnungbutton" src="img/rechnungen2.png" height="60px">
+		</div>
+		</a>
+	</div>
+	
+	<div class="inhalt_bereich">
+		<div class="leiste_oben">
+			<div class="leiste_oben_projekte">
+				Projekte
+			</div>
+		</div>
+		<div class="inhalt">
+			<table border="1" cellspacing="3px" cellpadding="3px" style="border-spacing: 0pt;" class="specialtable">
+				<tr style="font:bold 120% 'helvetica neue';">
+					<td>Projektname</td>
+					<td>Kundenbezeichnung</td>
+					<td>Stundensatz</td>
+					<td>maximale Stunden</td>
+					<td>gemachte Stunden</td>
+					<td>% erledigt</td>
+				</tr>
+				<tr>
+					<td>Projekt 1</td>
+					<td>Rudolf</td>
+					<td>55 Euro</td>
+					<td>150.00</td>
+					<td>24.25</td>
+					<td>16.2%</td>
+				</tr>
+
+				<tr>
+					<td>Projekt 2</td>
+					<td>Klaus</td>
+					<td>45 Euro</td>
+					<td>10.00</td>
+					<td>2.00</td>
+					<td>20%</td>
+				</tr>
+				<tr>
+					<td>Projekt 3</td>
+					<td>Santa</td>
+					<td>72.90 Euro</td>
+					<td>400.50</td>
+					<td>135.00</td>
+					<td>33.7%</td>
+				</tr>
+				<tr>
+					<td>Projekt 4</td>
+					<td>Joachim</td>
+					<td>50 Euro</td>
+					<td>50.00</td>
+					<td>14.55</td>
+					<td>29.1</td>
+
+				</tr>
+				<tr>
+					<td>Projekt 5</td>
+					<td>Erwin</td>
+					<td>90 Euro</td>
+					<td>150.00</td>
+					<td>24.25</td>
+					<td>16.2%</td>
+				</tr>
+
+				<tr>
+					<td>Projekt 6</td>
+					<td>Vinz</td>
+					<td>35 Euro</td>
+					<td>10.00</td>
+					<td>2.00</td>
+					<td>20%</td>
+				</tr>
+				<tr>
+					<td>Projekt 7</td>
+					<td>Dr. Schwarz</td>
+					<td>159.90 Euro</td>
+					<td>400.50</td>
+					<td>135.00</td>
+					<td>33.7%</td>
+				</tr>
+				<tr>
+					<td>Projekt 8</td>
+					<td>Lukas</td>
+					<td>48 Euro</td>
+					<td>50.00</td>
+					<td>14.55</td>
+					<td>29.1</td>
+				</tr>
+				<tr>
+					<td>Projekt 9</td>
+					<td>Richard</td>
+					<td>50 Euro</td>
+					<td>150.00</td>
+					<td>24.25</td>
+					<td>16.2%</td>
+				</tr>
+
+				<tr>
+					<td>Projekt 10</td>
+					<td>Norbert</td>
+					<td>55 Euro</td>
+					<td>10.00</td>
+					<td>2.00</td>
+					<td>20%</td>
+				</tr>
+				<tr>
+					<td>Projekt 11</td>
+					<td>Imke</td>
+					<td>28 Euro</td>
+					<td>400.50</td>
+					<td>135.00</td>
+					<td>33.7%</td>
+				</tr>
+				<tr>
+					<td>Projekt 12</td>
+					<td>These</td>
+					<td>50 Euro</td>
+					<td>50.00</td>
+					<td>14.55</td>
+					<td>29.1</td>
+				</tr>
+				<tr>
+					<td>Projekt 13</td>
+					<td>Mortn</td>
+					<td>47 Euro</td>
+					<td>150.00</td>
+					<td>24.25</td>
+					<td>16.2%</td>
+				</tr>
+
+				<tr>
+					<td>Projekt 14</td>
+					<td>DI DI Fink</td>
+					<td>109.90 Euro</td>
+					<td>10.00</td>
+					<td>2.00</td>
+					<td>20%</td>
+				</tr>
+				<tr>
+					<td>Projekt 15</td>
+					<td>Rene</td>
+					<td>68 Euro</td>
+					<td>400.50</td>
+					<td>135.00</td>
+					<td>33.7%</td>
+				</tr>
+				<tr>
+					<td>Projekt 16</td>
+					<td>Klara</td>
+					<td>69 Euro</td>
+					<td>50.00</td>
+					<td>14.55</td>
+					<td>29.1</td>
+				</tr>
+				<tr>
+					<td>Projekt 17</td>
+					<td>Wilma</td>
+					<td>10 Euro</td>
+					<td>150.00</td>
+					<td>24.25</td>
+					<td>16.2%</td>
+				</tr>
+
+				<tr>
+					<td>Projekt 18</td>
+					<td>Fred</td>
+					<td>30 Euro</td>
+					<td>10.00</td>
+					<td>2.00</td>
+					<td>20%</td>
+				</tr>
+				<tr>
+					<td>Projekt 19</td>
+					<td>Hannes</td>
+					<td>20 Euro</td>
+					<td>400.50</td>
+					<td>135.00</td>
+					<td>33.7%</td>
+				</tr>
+				<tr>
+					<td>Projekt 20</td>
+					<td>Thomas</td>
+					<td>50 Euro</td>
+					<td>50.00</td>
+					<td>14.55</td>
+					<td>29.1</td>
+				</tr>
+				<tr>
+					<td>Projekt 21</td>
+					<td>Ivy</td>
+					<td>41 Euro</td>
+					<td>150.00</td>
+					<td>24.25</td>
+					<td>16.2%</td>
+				</tr>
+
+				<tr>
+					<td>Projekt 22</td>
+					<td>Salomon</td>
+					<td>55 Euro</td>
+					<td>10.00</td>
+					<td>2.00</td>
+					<td>20%</td>
+				</tr>
+				<tr>
+					<td>Projekt 23</td>
+					<td>Tennis</td>
+					<td>90 Euro</td>
+					<td>400.50</td>
+					<td>135.00</td>
+					<td>33.7%</td>
+				</tr>
+				<tr>
+					<td>Projekt 24</td>
+					<td>Bravo</td>
+					<td>13.7603 Euro</td>
+					<td>50.00</td>
+					<td>14.55</td>
+					<td>29.1</td>
+				</tr>
+			</table>
+		</div>
+		<div class="leiste_unten">
+			<div class="neu_button">
+				<button rel="#neu" type="button">neues Projekt</button>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<p class="copyright">&copy; Iixd GmbH</p>
+	</div>
+	
+	<div class="neu_overlay" id="neu">
+		<form id="neu_formular" action="" method="post">
+			<div class="neu_tabelle">
+			<legend>Arbeitszeit eintragen</legend>
+				<table>
+					<tr>
+						<td>Projektname</td>
+						<td><input type="text" class="text" name="name" id="name"
+							value="Projektname">
+						</td>
+					</tr>
+					<tr>
+						<td>Kundenbezeichnung</td>
+						<td><input type="text" class="text" name="kunde" id="kunde"
+							value="Kundenbezeichnung">
+						</td>
+					</tr>
+					<tr>
+						<td>Stundensatz</td>
+						<td><input type="text" class="text" name="name"
+							id="Stundensatz" value="20.00">
+						</td>
+						<td>Euro</td>
+					</tr>
+					<tr>
+						<td>maximale Stunden</td>
+						<td><input type="text" class="text" name="name" id="stunden"
+							value="35.00">
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td align="right"><input type="reset" value="Reset"><input
+							type="submit" value="Submit">
+						</td>
+					</tr>
+				</table>
+			</div>
+		</form>
+	</div>
+</body>
+</html>
