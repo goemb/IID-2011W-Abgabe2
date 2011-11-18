@@ -1,0 +1,20 @@
+!SESSION 2011-11-17 18:48:05.780 -----------------------------------------------
+eclipse.buildId=M20110909-1335
+java.version=1.6.0_26
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=de_DE
+Framework arguments:  -keyring /Users/tamaranirschl/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -data /Users/tamaranirschl/IID-2011W-Abgabe2 -keyring /Users/tamaranirschl/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2011-11-17 18:48:39.897
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2011-11-18 16:19:17.823 -----------------------------------------------
+eclipse.buildId=M20110909-1335
+java.version=1.6.0_26
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=de_DE
+Framework arguments:  -keyring /Users/tamaranirschl/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -data /Users/tamaranirschl/IID-2011W-Abgabe2 -keyring /Users/tamaranirschl/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2011-11-18 16:19:30.679
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
