@@ -12,7 +12,7 @@
 
 <script>
 $(function() {
-	$("button[rel]").overlay({
+	$("div[rel]").overlay({
 		mask : '#000',
 		effect : 'apple'
 	});
@@ -24,7 +24,7 @@ body{background:#e4e4e4;color:black;font-family:verdana,sans-serif;}
 
 .kopf_hintergrund{background:#4e4e4e;width:100%;height:60px;}
 .kopf{width:900px;margin:0 auto;}
-.timey{font-variant:small-caps;font-size:3em;float:left;letter-spacing:0.25em;color:#ef9c17;}
+.timey{font-variant:small-caps;float:left;letter-spacing:0.25em;color:#ef9c17;font:bold 300% 'helvetica neue';margin-top:0.2em;}
 .because{font-size:1.2em;float:left;margin-left:1em;margin-top:1.7em;color:#1e1e1e;}
 
 .navigation{position:fixed;top:160px;left:40px;width:80px;height:300px;}
@@ -32,21 +32,26 @@ body{background:#e4e4e4;color:black;font-family:verdana,sans-serif;}
 .home{background:white;height:65px;width:65px;border-radius:15px;-moz-border-radius:15px;margin:0 auto auto auto;border-style:dotted;border-width:2px;border-color:#b7b7b7;}
 .homebutton{margin:7px auto auto 10px;}
 .zeit:hover{background:#ead7aa;}
-.zeit{height:65px;width:65px;border-radius:15px;-moz-border-radius:15px;margin:9px auto auto auto;border-style:dotted;border-width:2px;border-color:#b7b7b7;}
-.zeitbutton{margin:7px auto auto 1px;}
+.zeit{height:43px;width:43px;border-radius:15px;-moz-border-radius:15px;margin:9px 8px auto auto;border-style:dotted;border-width:2px;border-color:#b7b7b7;}
+.zeitbutton{margin:5px auto auto 1px;}
+.statistik_klein:hover{background:#ead7aa;}
+.statistik_klein{height:43px;width:43px;border-radius:15px;-moz-border-radius:15px;margin:9px 8px auto auto;border-style:dotted;border-width:2px;border-color:#b7b7b7;}
+.statistikbutton_klein{margin:4px auto auto 2px;}
+.rechnung:hover{background:#ead7aa;}
+.rechnung{height:43px;width:43px;border-radius:15px;-moz-border-radius:15px;margin:9px 8px auto auto;border-style:dotted;border-width:2px;border-color:#b7b7b7;}
+.rechnungbutton{margin:1px auto auto 1px;}
 .statistik:hover{background:#ead7aa;}
 .statistik{height:65px;width:65px;border-radius:15px;-moz-border-radius:15px;margin:9px auto auto auto;border-style:dotted;border-width:2px;border-color:#b7b7b7;}
 .statistikbutton{margin:7px auto auto 2px;}
-.rechnung:hover{background:#ead7aa;}
-.rechnung{height:65px;width:65px;border-radius:15px;-moz-border-radius:15px;margin:9px auto auto auto;border-style:dotted;border-width:2px;border-color:#b7b7b7;}
-.rechnungbutton{margin:4px auto auto 2px;}
+
 
 .inhalt_bereich{width:950px;height:570px;background:white;margin:3em auto auto auto;border-radius:15px;-moz-border-radius:15px;}
 .leiste_oben{width:100%;height:30px;}
 .leiste_oben_projekte{float:left;margin:7px auto auto 25px;font:bold 150% 'helvetica neue';}
 .inhalt{width:99%;height:510px;margin:0 auto;overflow:scroll;}
 .leiste_unten{width:100%;height:30px;}
-.neu_button{float:left;margin:3px auto auto 25px;}
+.neu_button:hover{background:#ead7aa;cursor:pointer;}
+.neu_button{width:57px;float:left;margin:3px auto auto 25px;border-style:dotted;border-width:2px;border-color:#b7b7b7;border-radius:15px;-moz-border-radius:15px;text-align:center;}
 .neu_tabelle{position:absolute;left:50px;top:110px;}
 
 .footer{width:100%}
@@ -83,14 +88,24 @@ body{background:#e4e4e4;color:black;font-family:verdana,sans-serif;}
 	</div>
 	
 	<div class="navigation">
-		<a href="index.html">
+		<a href="index.html" title="Home">
 		<div class="home">
 			<img class="homebutton" src="img/home.png" height="60px">
 		</div>
 		</a>
 		<a href="zeit.html">
 		<div class="zeit">
-			<img class="zeitbutton" src="img/zeit2.png" height="60px">
+			<img class="zeitbutton" src="img/zeit2.png" height="40px">
+		</div>
+		</a>
+		<a href="statistik.html">
+		<div class="statistik_klein">
+			<img class="statistikbutton_klein" src="img/statistik2.png" height="40px">
+		</div>
+		</a>		
+		<a href="rechnung.html">
+		<div class="rechnung">
+			<img class="rechnungbutton" src="img/rechnungen2.png" height="40px">
 		</div>
 		</a>
 		<a href="statistik.html">
@@ -98,11 +113,7 @@ body{background:#e4e4e4;color:black;font-family:verdana,sans-serif;}
 			<img class="statistikbutton" src="img/statistik2.png" height="60px">
 		</div>
 		</a>
-		<a href="rechnung.html">
-		<div class="rechnung">
-			<img class="rechnungbutton" src="img/rechnungen2.png" height="60px">
-		</div>
-		</a>
+
 	</div>
 	
 	<div class="inhalt_bereich">
@@ -323,8 +334,8 @@ body{background:#e4e4e4;color:black;font-family:verdana,sans-serif;}
 			</table>
 		</div>
 		<div class="leiste_unten">
-			<div class="neu_button">
-				<button rel="#neu" type="button">neues Projekt</button>
+			<div class="neu_button" rel="#neu">
+				Projekt+
 			</div>
 		</div>
 	</div>
