@@ -8,8 +8,13 @@
 <link rel="stylesheet" href="css/blueprint/screen.css" type="text/css" media="screen, projection">
 <link rel="stylesheet" href="css/blueprint/print.css" type="text/css" media="print">
 <link rel="stylesheet" href="css/grundstyle.css" type="text/css">
+<link rel="stylesheet" href="css/ui-lightness/jquery-ui-1.8.16.custom.css" type="text/css">
+<link rel="stylesheet" href="css/timepicker.css" type="text/css">
 
-<script src="http://cdn.jquerytools.org/1.2.6/full/jquery.tools.min.js"></script>
+<script src="./js/jquery-1.6.2.min.js"></script>
+<script src="./js/jquery.tools.min.js"></script>
+<script src="./js/jquery-ui-1.8.16.custom.min.js"></script>
+<script src="./js/jquery-ui-timepicker-addon.js"></script>
 
 <script>
 $(function() {
@@ -18,6 +23,72 @@ $(function() {
 		effect : 'apple'
 	});
 });
+$(function() {
+		$( "#beginn" ).datetimepicker({
+		dateFormat:'dd.mm.yy',
+		prevText: '<',
+		nextText: '>',
+		currentText: 'Jetzt',
+		monthNames: ['J&auml;nner','Februar','M&auml;rz','April','Mai','Juni',
+		'Juli','August','September','Oktober','November','Dezember'],
+		monthNamesShort: ['Jan','Feb','M&auml;r','Apr','Mai','Jun',
+		'Jul','Aug','Sep','Okt','Nov','Dez'],
+		dayNames: ['Montag','Dienstag','Mittwoch','Donnerstag','Freitag','Samstag','Sonntag'],
+		dayNamesShort: ['Mo','Di','Mi','Do','Fr','Sa','So'],
+		dayNamesMin: ['Mo','Di','Mi','Do','Fr','Sa','So'],
+		weekHeader: 'KW',
+		firstDay: 7,
+		isRTL: false,
+		showMonthAfterYear: false,
+		yearSuffix: '',
+		timeText: 'Uhrzeit',
+		hourText: 'Stunde',
+		minuteText: 'Minute',		
+		closeText: 'w&auml;hlen',
+		onSelect: function (selectedDateTime){
+		var start = $(this).datetimepicker('getDate');
+		$('#ende').datetimepicker('option', 'minDate', new Date(start.getTime()) );
+	}});
+});
+$(function() {
+		$( "#ende" ).datetimepicker({
+		dateFormat:'dd.mm.yy',
+		prevText: '<',
+		nextText: '>',
+		currentText: 'Jetzt',
+		monthNames: ['J&auml;nner','Februar','M&auml;rz','April','Mai','Juni',
+		'Juli','August','September','Oktober','November','Dezember'],
+		monthNamesShort: ['Jan','Feb','M&auml;r','Apr','Mai','Jun',
+		'Jul','Aug','Sep','Okt','Nov','Dez'],
+		dayNames: ['Montag','Dienstag','Mittwoch','Donnerstag','Freitag','Samstag','Sonntag'],
+		dayNamesShort: ['Mo','Di','Mi','Do','Fr','Sa','So'],
+		dayNamesMin: ['Mo','Di','Mi','Do','Fr','Sa','So'],
+		weekHeader: 'KW',
+		firstDay: 7,
+		isRTL: false,
+		showMonthAfterYear: false,
+		yearSuffix: '',
+		timeText: 'Uhrzeit',
+		hourText: 'Stunde',
+		minuteText: 'Minute',		
+		closeText: 'w&auml;hlen',
+		onSelect: function (selectedDateTime){
+		var end = $(this).datetimepicker('getDate');
+		$('#beginn').datetimepicker('option', 'maxDate', new Date(end.getTime()) );
+	}});
+});
+$(function() {
+		$( "#dauer" ).timepicker({
+	timeFormat: 'h:m',
+	timeOnlyTitle: 'Dauer',
+	timeText: 'Dauer',
+	hourText: 'Stunden',
+	minuteText: 'Minuten',
+	currentText: 'jetzt',
+	closeText: 'w&auml;hlen'
+});
+});
+	
 </script>
 
 <style type="text/css">
@@ -430,40 +501,39 @@ $(function() {
 			<legend>Arbeitszeit eintragen</legend>
 				<table>
 					<tr>
-						<td>Datum</td>
-						<td><input type="text" class="text" name="datum" id="datum"
-							value="24.12.2012">
-						</td>
-					</tr>
-					<tr>
-						<td>Beginnzeit</td>
+						<td>Beginn</td>
 						<td><input type="text" class="text" name="beginn" id="beginn"
-							value="24.12.2012 12:24">
+							value="18.11.2011 08:00"/>
 						</td>
 					</tr>
 					<tr>
-						<td>Endzeit/Dauer</td>
-						<td><input type="text" class="text" name="ende"
-							id="ende" value="25.12.2012 04:24/16:00">
+						<td>Ende</td>
+						<td><input type="text" class="text" name="ende" id="ende"
+							value="18.11.2011 09:20"/>
+						</td>
+					</tr>
+					<tr>
+						<td>Dauer</td>
+						<td><input type="text" class="text" name="dauer"
+							id="dauer" value="01:20"/>
 						</td>
 					</tr>
 					<tr>
 						<td>Art der Tätigkeit</td>
 						<td><input type="text" class="text" name="art" id="art"
-							value="Geschenke verteilen">
+							value="Implementierung Datepicker"/>
 						</td>
 					</tr>
 					<tr>
 						<td>Beschreibung der Tätigkeit (optional)</td>
 						<td><input type="text" class="text" name="beschreibung" id="beschreibung"
-							value="ein Geschenk fallen gelasse - kaputt">
+							value="Mittels JQuery wurde ein Datepicker implementiert."/>
 						</td>
 					</tr>
 					<tr>
 						<td>Ist die Tätigkeit verrechenbar?</td>
 						<td>
-							<input type="radio" name="verrechenbar" value="verrechenbar"> Ja, verrechenbar.
-							<input type="radio" name="unverrechenbar" value="unverrechenbar"> Nein, nicht verrechenbar.
+							<input type="checkbox" name="verrechenbar" value="verrechenbar">
 						</td>
 					</tr>
 					<tr>
