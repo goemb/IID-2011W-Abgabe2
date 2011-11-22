@@ -51,6 +51,8 @@ $(function() {
 .neu_button2:hover{background:#ead7aa;cursor:pointer;}
 .neu_button2{border-style:dotted;border-width:2px;border-color:#b7b7b7;border-radius:9px;-moz-border-radius:9px;text-align:center;font:bold 120% 'verdana';color:green;width:40px;float:right;margin:20px 30px auto auto;}
 .neu2_tabelle{position:absolute;left:40px;top:110px;}
+.notiz_button:hover{background:#ead7aa;cursor:pointer;}
+.notiz_button{border-style:dotted;border-width:2px;border-color:#b7b7b7;border-radius:9px;-moz-border-radius:9px;text-align:center;width:60px;}
 
 .neu2_overlay {
 	display: none;
@@ -131,7 +133,44 @@ $(function() {
 			<div class="neu_button2" rel="#neu2">+</div>
 		</div>
 		<div class="inhalt">
-			Hier steht Inhalt
+			<table border="1" cellspacing="3px" cellpadding="3px" style="border-spacing: 0pt;" class="specialtable">
+				<tr style="font:bold 120% 'helvetica neue';">
+					<td>Datum</td>
+					<td>Beginn</td>
+					<td>Ende</td>
+					<td>Dauer</td>
+					<td>Tätigkeit</td>
+					<td>verrechenbar</td>
+					<td><div style="color:white">Trick---</div></td>
+				</tr>
+				<tr style="font:bold 120% 'helvetica neue';">
+					<td>20.05.2011</td>
+					<td>10:00</td>
+					<td>14:00</td>
+					<td>4 Stunden</td>
+					<td>Grundgerüst</td>
+					<td><input style="margin-left:30px;" type="checkbox" name="verrechenbar" checked="checked" onclick="this.checked=!this.checked"></td>
+					<td><div class="notiz_button" rel="#notiz">Notizen</div></td>
+				</tr>
+				<tr style="font:bold 120% 'helvetica neue';">
+					<td>15.05.2011</td>
+					<td>10:00</td>
+					<td>14:00</td>
+					<td>4 Stunden</td>
+					<td>Ausarbeitung</td>
+					<td><input style="margin-left:30px;" type="checkbox" name="verrechenbar" checked="checked" onclick="this.checked=!this.checked"></td>
+					<td></td>
+				</tr>
+				<tr style="font:bold 120% 'helvetica neue';">
+					<td>13.05.2011</td>
+					<td>10:00</td>
+					<td>12:00</td>
+					<td>2 Stunden</td>
+					<td>Finalisierung</td>
+					<td><input style="margin-left:30px;" type="checkbox" name="verrechenbar" onclick="this.checked=!this.checked"></td>
+					<td><div class="notiz_button" rel="#notiz">Notizen</div></td>
+				</tr>
+			</table>
 		</div>
 	</div>
 	<div class="footer">
