@@ -40,10 +40,37 @@ $(function() {
 
 
 .inhalt_bereich{width:950px;height:530px;background:white;margin:3em auto auto auto;border-radius:15px;-moz-border-radius:15px;}
-.leiste_oben{width:100%;height:30px;}
-.leiste_oben_projekte{float:left;margin:7px auto auto 25px;font:bold 150% 'helvetica neue';}
-.inhalt{width:99%;height:470px;margin:0 auto;overflow:scroll;}
-.leiste_unten{width:100%;height:30px;}
+.leiste_oben{width:100%;height:50px;}
+.leiste_oben_statistik1:hover{background:#ead7aa;}
+.leiste_oben_statistik1{width:80px;text-align:center;float:left;margin:17px auto auto 25px;font:bold 150% 'helvetica neue';border-radius:9px;-moz-border-radius:9px;border-style:dotted;border-width:2px;border-color:#b7b7b7;}
+.leiste_oben_statistik2:hover{background:#ead7aa;}
+.leiste_oben_statistik2{width:80px;text-align:center;float:left;margin:17px auto auto 15px;font:bold 150% 'helvetica neue';border-radius:9px;-moz-border-radius:9px;border-style:dotted;border-width:2px;border-color:#b7b7b7;background:#e4e4e4;}
+.leiste_oben_statistik3:hover{background:#ead7aa;}
+.leiste_oben_statistik3{width:80px;text-align:center;float:left;margin:17px auto auto 15px;font:bold 150% 'helvetica neue';border-radius:9px;-moz-border-radius:9px;border-style:dotted;border-width:2px;border-color:#b7b7b7;background:#e4e4e4;}
+.inhalt{width:99%;height:475px;margin:0 auto;overflow:scroll;}
+.neu_button2:hover{background:#ead7aa;cursor:pointer;}
+.neu_button2{border-style:dotted;border-width:2px;border-color:#b7b7b7;border-radius:9px;-moz-border-radius:9px;text-align:center;font:bold 120% 'verdana';color:green;width:40px;float:right;margin:20px 30px auto auto;}
+.neu2_tabelle{position:absolute;left:40px;top:110px;}
+
+.neu2_overlay {
+	display: none;
+	width: 490px;
+	padding: 35px;
+	font-size: 11px;
+}
+.neu2_overlay .close {
+	background-image: url(img/close.png);
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	cursor: pointer;
+	height: 35px;
+	width: 35px;
+}
+#neu2 {
+	background-image:url(img/form.png);
+	padding: 50px 70px;
+}
 
 .specialtable tr:nth-child(even) td, tbody tr.even td {background:#fff3d6;}
 </style>
@@ -86,20 +113,81 @@ $(function() {
 	
 	<div class="inhalt_bereich">
 		<div class="leiste_oben">
-			<div class="leiste_oben_projekte">
-				Detailansicht Projekt 1
+			<a href="projekt01.html" title="Statistiken 1">
+			<div class="leiste_oben_statistik1">
+				Liste
 			</div>
+			</a>
+			<a href="projekt01-2.html" title="Statistiken 2">
+			<div class="leiste_oben_statistik2">
+				Monat
+			</div>
+			</a>
+			<a href="projekt01-3.html" title="Statistiken 3">
+			<div class="leiste_oben_statistik3">
+				Woche
+			</div>
+			</a>
+			<div class="neu_button2" rel="#neu2">+</div>
 		</div>
 		<div class="inhalt">
 			Hier steht Inhalt
-		</div>
-		<div class="leiste_unten">
-			???
 		</div>
 	</div>
 	<div class="footer">
 		<p class="copyright">&copy; Iixd GmbH</p>
 	</div>
-
+	<div class="neu2_overlay" id="neu2">
+		<form id="neu2_formular" action="" method="post">
+			<div class="neu2_tabelle">
+			<legend>Arbeitszeit eintragen</legend>
+				<table>
+					<tr>
+						<td>Datum</td>
+						<td><input type="text" class="text" name="datum" id="datum"
+							value="24.12.2012">
+						</td>
+					</tr>
+					<tr>
+						<td>Beginnzeit</td>
+						<td><input type="text" class="text" name="beginn" id="beginn"
+							value="24.12.2012 12:24">
+						</td>
+					</tr>
+					<tr>
+						<td>Endzeit/Dauer</td>
+						<td><input type="text" class="text" name="ende"
+							id="ende" value="25.12.2012 04:24/16:00">
+						</td>
+					</tr>
+					<tr>
+						<td>Art der Tätigkeit</td>
+						<td><input type="text" class="text" name="art" id="art"
+							value="Geschenke verteilen">
+						</td>
+					</tr>
+					<tr>
+						<td>Beschreibung der Tätigkeit (optional)</td>
+						<td><input type="text" class="text" name="beschreibung" id="beschreibung"
+							value="ein Geschenk fallen gelasse - kaputt">
+						</td>
+					</tr>
+					<tr>
+						<td>Ist die Tätigkeit verrechenbar?</td>
+						<td>
+							<input type="radio" name="verrechenbar" value="verrechenbar"> Ja, verrechenbar.
+							<input type="radio" name="unverrechenbar" value="unverrechenbar"> Nein, nicht verrechenbar.
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td align="right"><input type="reset" value="Reset"><input
+							type="submit" value="Submit">
+						</td>
+					</tr>
+				</table>
+			</div>
+		</form>
+	</div>
 </body>
 </html>
