@@ -89,6 +89,13 @@ $(function() {
 });
 });
 	
+function eingetragen(){
+	alert("Erfolgreich eingetragen!");
+	
+	$("div[rel]").each(function() {
+		$(this).overlay().close();
+	});
+}
 </script>
 
 <style type="text/css">
@@ -117,7 +124,7 @@ $(function() {
 .projekt_link:hover{background:#ead7aa;}
 .projekt_link{border-style:dotted;border-width:2px;border-color:#b7b7b7;border-radius:9px;-moz-border-radius:9px;text-align:center;}
 .submit_link:hover{background:#ead7aa;}
-.submit_link{border-style:dotted;border-width:2px;border-color:#b7b7b7;border-radius:9px;-moz-border-radius:9px;text-align:right;}
+.submit_link{width:60px;padding:2px;border-style:dotted;border-width:2px;border-color:#b7b7b7;border-radius:9px;-moz-border-radius:9px;text-align:center;}
 .projekt_link_dummy{border-style:dotted;border-width:2px;border-color:#b7b7b7;border-radius:9px;-moz-border-radius:9px;text-align:center;}
 .neu_button:hover{background:#ead7aa;cursor:pointer;}
 .neu_button{width:110px;float:right;margin:17px 25px auto auto;border-style:dotted;border-width:2px;border-color:#b7b7b7;border-radius:9px;-moz-border-radius:9px;text-align:center;}
@@ -491,8 +498,8 @@ $(function() {
 						</td>
 					</tr>
 					<tr>
-						<td colspan="2" align="right">
-							<a onclick="$('#neu_formular').replaceWith('Erfolgreich eingetragen!')" class="submit_link">Eintragen</a>
+						<td colspan="2">
+							<div class="submit_link" onclick="eingetragen()">Eintragen</div>
 						</td>
 					</tr>
 					<tr>
@@ -546,8 +553,8 @@ $(function() {
 						</td>
 					</tr>
 					<tr>
-						<td colspan="2" align="right">
-							<a onclick="$('#neu2_formular').replaceWith('Erfolgreich eingetragen!')" class="submit_link">Eintragen</a>
+						<td colspan="2">
+							<div class="submit_link" onclick="eingetragen()">Eintragen</div>
 						</td>
 					</tr>
 					<tr>
