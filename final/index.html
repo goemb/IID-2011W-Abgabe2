@@ -116,6 +116,8 @@ $(function() {
 .inhalt{width:99%;height:475px;margin:0 auto;overflow:scroll;}
 .projekt_link:hover{background:#ead7aa;}
 .projekt_link{border-style:dotted;border-width:2px;border-color:#b7b7b7;border-radius:9px;-moz-border-radius:9px;text-align:center;}
+.submit_link:hover{background:#ead7aa;}
+.submit_link{border-style:dotted;border-width:2px;border-color:#b7b7b7;border-radius:9px;-moz-border-radius:9px;text-align:right;}
 .projekt_link_dummy{border-style:dotted;border-width:2px;border-color:#b7b7b7;border-radius:9px;-moz-border-radius:9px;text-align:center;}
 .neu_button:hover{background:#ead7aa;cursor:pointer;}
 .neu_button{width:110px;float:right;margin:17px 25px auto auto;border-style:dotted;border-width:2px;border-color:#b7b7b7;border-radius:9px;-moz-border-radius:9px;text-align:center;}
@@ -165,6 +167,12 @@ $(function() {
 }
 
 .specialtable tr:nth-child(even) td, tbody tr.even td {background:#fff3d6;}
+
+.textarea{
+	width: 500px;
+    height: 50px;
+	padding: 5px;
+}
 </style>
 </head>
 <body>
@@ -456,26 +464,25 @@ $(function() {
 	<div class="neu_overlay" id="neu">
 		<form id="neu_formular" action="" method="post">
 			<div class="neu_tabelle">
-			<legend>neues Projekt eintragen</legend>
+			<legend>Neues Projekt</legend>
 				<table>
 					<tr>
-						<td>Projektname</td>
+						<td>Projektname*</td>
 						<td><input type="text" class="text" name="name" id="name"
-							value="Projektname">
+							value="Projekt A">
 						</td>
 					</tr>
 					<tr>
-						<td>Kundenbezeichnung</td>
+						<td>Kunde*</td>
 						<td><input type="text" class="text" name="kunde" id="kunde"
-							value="Kundenbezeichnung">
+							value="Kunde A">
 						</td>
 					</tr>
 					<tr>
-						<td>Stundensatz</td>
+						<td>Stundensatz in Euro*</td>
 						<td><input type="text" class="text" name="name"
 							id="Stundensatz" value="20.00">
 						</td>
-						<td>Euro</td>
 					</tr>
 					<tr>
 						<td>maximale Stunden</td>
@@ -484,10 +491,12 @@ $(function() {
 						</td>
 					</tr>
 					<tr>
-						<td></td>
-						<td align="right"><input type="reset" value="Reset"><input
-							type="submit" value="Submit">
+						<td colspan="2" align="right">
+							<a onclick="$('#neu_formular').replaceWith('Erfolgreich eingetragen!')" class="submit_link">Eintragen</a>
 						</td>
+					</tr>
+					<tr>
+						<td colspan="2">(Pflichtfelder sind mit * gekennzeichnet)</td>
 					</tr>
 				</table>
 			</div>
@@ -496,49 +505,53 @@ $(function() {
 	<div class="neu2_overlay" id="neu2">
 		<form id="neu2_formular" action="" method="post">
 			<div class="neu2_tabelle">
-			<legend>Arbeitszeit eintragen</legend>
+			<legend>Neuer Zeiteintrag</legend>
 				<table>
 					<tr>
-						<td>Beginn</td>
+						<td>Beginn*</td>
 						<td><input type="text" class="text" name="beginn" id="beginn"
 							value="18.11.2011 08:00"/>
 						</td>
 					</tr>
 					<tr>
-						<td>Ende</td>
+						<td>Ende*</td>
 						<td><input type="text" class="text" name="ende" id="ende"
 							value="18.11.2011 09:20"/>
 						</td>
 					</tr>
 					<tr>
-						<td>Dauer</td>
+						<td>Dauer*</td>
 						<td><input type="text" class="text" name="dauer"
 							id="dauer" value="01:20"/>
 						</td>
 					</tr>
 					<tr>
-						<td>Art der Tätigkeit</td>
+						<td>Tätigkeit*</td>
 						<td><input type="text" class="text" name="art" id="art"
 							value="Implementierung Datepicker"/>
 						</td>
 					</tr>
 					<tr>
-						<td>Beschreibung der Tätigkeit (optional)</td>
-						<td><input type="text" class="text" name="beschreibung" id="beschreibung"
-							value="Mittels JQuery wurde ein Datepicker implementiert."/>
-						</td>
-					</tr>
-					<tr>
-						<td>Ist die Tätigkeit verrechenbar?</td>
+						<td>Verrechenbar?*</td>
 						<td>
 							<input type="checkbox" name="verrechenbar" value="verrechenbar">
 						</td>
 					</tr>
 					<tr>
-						<td></td>
-						<td align="right"><input type="reset" value="Reset"><input
-							type="submit" value="Submit">
+						<td colspan="2">Notizen</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<textarea class="textarea" name="notizen" id="notizen" rows="2">Mittels JQuery wurde ein Datepicker implementiert.</textarea>
 						</td>
+					</tr>
+					<tr>
+						<td colspan="2" align="right">
+							<a onclick="$('#neu2_formular').replaceWith('Erfolgreich eingetragen!')" class="submit_link">Eintragen</a>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">(Pflichtfelder sind mit * gekennzeichnet)</td>
 					</tr>
 				</table>
 			</div>
