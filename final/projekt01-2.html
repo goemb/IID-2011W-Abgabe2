@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Time Managed!</title>
+
+<link rel="stylesheet" href="css/blueprint/screen.css" type="text/css" media="screen, projection">
+<link rel="stylesheet" href="css/blueprint/print.css" type="text/css" media="print">
+<link rel="stylesheet" href="css/grundstyle.css" type="text/css">
+
+<script src="http://cdn.jquerytools.org/1.2.6/full/jquery.tools.min.js"></script>
+
+<script>
+$(function() {
+	$("div[rel]").overlay({
+		mask : '#000',
+		effect : 'apple'
+	});
+});
+</script>
+
+<style type="text/css">
+.navigation{position:fixed;top:160px;left:40px;width:80px;height:300px;}
+.home:hover{background:#ead7aa;}
+.home{background:white;height:65px;width:65px;border-radius:15px;-moz-border-radius:15px;margin:0 auto auto auto;border-style:dotted;border-width:2px;border-color:#b7b7b7;}
+.homebutton{margin:7px auto auto 10px;}
+.zeit:hover{background:#ead7aa;}
+.zeit{height:43px;width:43px;border-radius:15px;-moz-border-radius:15px;margin:9px 8px auto auto;border-style:dotted;border-width:2px;border-color:#b7b7b7;background:white;}
+.zeitbutton{margin:5px auto auto 1px;}
+.statistik_klein:hover{background:#ead7aa;}
+.statistik_klein{height:43px;width:43px;border-radius:15px;-moz-border-radius:15px;margin:9px 8px auto auto;border-style:dotted;border-width:2px;border-color:#b7b7b7;}
+.statistikbutton_klein{margin:4px auto auto 2px;}
+.rechnung:hover{background:#ead7aa;}
+.rechnung{height:43px;width:43px;border-radius:15px;-moz-border-radius:15px;margin:9px 8px auto auto;border-style:dotted;border-width:2px;border-color:#b7b7b7;}
+.rechnungbutton{margin:1px auto auto 1px;}
+.statistik:hover{background:#ead7aa;}
+.statistik{height:65px;width:65px;border-radius:15px;-moz-border-radius:15px;margin:9px auto auto auto;border-style:dotted;border-width:2px;border-color:#b7b7b7;}
+.statistikbutton{margin:7px auto auto 2px;}
+
+
+.inhalt_bereich{width:950px;height:530px;background:white;margin:3em auto auto auto;border-radius:15px;-moz-border-radius:15px;}
+.leiste_oben{width:100%;height:50px;}
+.leiste_oben_statistik1:hover{background:#ead7aa;}
+.leiste_oben_statistik1{width:80px;text-align:center;float:left;margin:17px auto auto 25px;font:bold 150% 'helvetica neue';border-radius:9px;-moz-border-radius:9px;border-style:dotted;border-width:2px;border-color:#b7b7b7;background:#e4e4e4;}
+.leiste_oben_statistik2:hover{background:#ead7aa;}
+.leiste_oben_statistik2{width:80px;text-align:center;float:left;margin:17px auto auto 15px;font:bold 150% 'helvetica neue';border-radius:9px;-moz-border-radius:9px;border-style:dotted;border-width:2px;border-color:#b7b7b7;}
+.leiste_oben_statistik3:hover{background:#ead7aa;}
+.leiste_oben_statistik3{width:80px;text-align:center;float:left;margin:17px auto auto 15px;font:bold 150% 'helvetica neue';border-radius:9px;-moz-border-radius:9px;border-style:dotted;border-width:2px;border-color:#b7b7b7;background:#e4e4e4;}
+.inhalt{width:99%;height:475px;margin:0 auto;overflow:scroll;}
+.neu_button2:hover{background:#ead7aa;cursor:pointer;}
+.neu_button2{border-style:dotted;border-width:2px;border-color:#b7b7b7;border-radius:9px;-moz-border-radius:9px;text-align:center;font:bold 120% 'verdana';color:green;width:40px;float:right;margin:20px 30px auto auto;}
+.neu2_tabelle{position:absolute;left:40px;top:110px;}
+
+.neu2_overlay {
+	display: none;
+	width: 490px;
+	padding: 35px;
+	font-size: 11px;
+}
+.neu2_overlay .close {
+	background-image: url(img/close.png);
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	cursor: pointer;
+	height: 35px;
+	width: 35px;
+}
+#neu2 {
+	background-image:url(img/form.png);
+	padding: 50px 70px;
+}
+
+.specialtable tr:nth-child(even) td, tbody tr.even td {background:#fff3d6;}
+</style>
+</head>
+<body>
+	<div class="kopf_hintergrund">
+		<div class="kopf">
+			<div class="timey">Timey!</div><div class="because">because time matters</div>
+		</div>
+	</div>
+	
+	<div class="navigation">
+		<a href="index.html" title="Home">
+		<div class="home">
+			<img class="homebutton" src="img/home.png" height="60px">
+		</div>
+		</a>
+		<a href="projekt01.html" title="Detailansicht">
+		<div class="zeit">
+			<img class="zeitbutton" src="img/zeit2.png" height="40px">
+		</div>
+		</a>
+		<a href="projekt_statistik01.html" title="Projektstatistiken">
+		<div class="statistik_klein">
+			<img class="statistikbutton_klein" src="img/statistik2.png" height="40px">
+		</div>
+		</a>		
+		<a href="projekt_rechnung01.html" title="Rechnung">
+		<div class="rechnung">
+			<img class="rechnungbutton" src="img/rechnungen2.png" height="40px">
+		</div>
+		</a>
+		<a href="statistiken.html" title="allgemeine Statistiken">
+		<div class="statistik">
+			<img class="statistikbutton" src="img/statistik2.png" height="60px">
+		</div>
+		</a>
+
+	</div>
+	
+	<div class="inhalt_bereich">
+		<div class="leiste_oben">
+			<a href="projekt01.html" title="Statistiken 1">
+			<div class="leiste_oben_statistik1">
+				Liste
+			</div>
+			</a>
+			<a href="projekt01-2.html" title="Statistiken 2">
+			<div class="leiste_oben_statistik2">
+				Monat
+			</div>
+			</a>
+			<a href="projekt01-3.html" title="Statistiken 3">
+			<div class="leiste_oben_statistik3">
+				Woche
+			</div>
+			</a>
+			<div class="neu_button2" rel="#neu2">+</div>
+		</div>
+		<div class="inhalt">
+			Hier steht Inhalt
+		</div>
+	</div>
+	<div class="footer">
+		<p class="copyright">&copy; Iixd GmbH</p>
+	</div>
+	<div class="neu2_overlay" id="neu2">
+		<form id="neu2_formular" action="" method="post">
+			<div class="neu2_tabelle">
+			<legend>Arbeitszeit eintragen</legend>
+				<table>
+					<tr>
+						<td>Datum</td>
+						<td><input type="text" class="text" name="datum" id="datum"
+							value="24.12.2012">
+						</td>
+					</tr>
+					<tr>
+						<td>Beginnzeit</td>
+						<td><input type="text" class="text" name="beginn" id="beginn"
+							value="24.12.2012 12:24">
+						</td>
+					</tr>
+					<tr>
+						<td>Endzeit/Dauer</td>
+						<td><input type="text" class="text" name="ende"
+							id="ende" value="25.12.2012 04:24/16:00">
+						</td>
+					</tr>
+					<tr>
+						<td>Art der Tätigkeit</td>
+						<td><input type="text" class="text" name="art" id="art"
+							value="Geschenke verteilen">
+						</td>
+					</tr>
+					<tr>
+						<td>Beschreibung der Tätigkeit (optional)</td>
+						<td><input type="text" class="text" name="beschreibung" id="beschreibung"
+							value="ein Geschenk fallen gelasse - kaputt">
+						</td>
+					</tr>
+					<tr>
+						<td>Ist die Tätigkeit verrechenbar?</td>
+						<td>
+							<input type="radio" name="verrechenbar" value="verrechenbar"> Ja, verrechenbar.
+							<input type="radio" name="unverrechenbar" value="unverrechenbar"> Nein, nicht verrechenbar.
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td align="right"><input type="reset" value="Reset"><input
+							type="submit" value="Submit">
+						</td>
+					</tr>
+				</table>
+			</div>
+		</form>
+	</div>
+</body>
+</html>
