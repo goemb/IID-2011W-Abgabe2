@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="css/blueprint/print.css" type="text/css" media="print">
 <link rel="stylesheet" href="css/grundstyle.css" type="text/css">
 
-<script src="http://cdn.jquerytools.org/1.2.6/full/jquery.tools.min.js"></script>
+<script src="js/jquery.tools.min.js"></script>
 
 <script>
 $(function() {
@@ -40,15 +40,14 @@ $(function() {
 
 
 .inhalt_bereich{width:950px;height:530px;background:white;margin:3em auto auto auto;border-radius:15px;-moz-border-radius:15px;}
-.leiste_oben{width:100%;height:30px;}
-.leiste_oben_projekte{float:left;margin:7px auto auto 25px;font:bold 150% 'helvetica neue';}
-.inhalt{width:99%;height:470px;margin:0 auto;overflow:scroll;}
+.leiste_oben{width:100%;height:50px;}
+.leiste_oben_projekte{float:left;margin:17px auto auto 25px;font:bold 170% 'helvetica neue';}
+.inhalt{width:99%;height:475px;margin:0 auto;overflow:scroll;}
 .projekt_link:hover{background:#ead7aa;}
 .projekt_link{border-style:dotted;border-width:2px;border-color:#b7b7b7;border-radius:9px;-moz-border-radius:9px;text-align:center;}
 .projekt_link_dummy{border-style:dotted;border-width:2px;border-color:#b7b7b7;border-radius:9px;-moz-border-radius:9px;text-align:center;}
-.leiste_unten{width:100%;height:30px;}
 .neu_button:hover{background:#ead7aa;cursor:pointer;}
-.neu_button{width:110px;float:left;margin:3px auto auto 10px;border-style:dotted;border-width:2px;border-color:#b7b7b7;border-radius:9px;-moz-border-radius:9px;text-align:center;}
+.neu_button{width:110px;float:right;margin:17px 25px auto auto;border-style:dotted;border-width:2px;border-color:#b7b7b7;border-radius:9px;-moz-border-radius:9px;text-align:center;}
 .neu_button2:hover{background:#ead7aa;cursor:pointer;}
 .neu_button2{border-style:dotted;border-width:2px;border-color:#b7b7b7;border-radius:9px;-moz-border-radius:9px;text-align:center;font:bold 120% 'verdana';color:green;width:40px;}
 .neu_tabelle{position:absolute;left:50px;top:110px;}
@@ -138,6 +137,10 @@ $(function() {
 			<div class="leiste_oben_projekte">
 				Projekte
 			</div>
+			<div class="neu_button" rel="#neu">
+				<div style="float:left;margin:3px auto auto 27px">Projekt</div>
+				<div style="float:right;font:bold 130% 'helvetica neue';margin:auto 27px 4px auto;">+</div>
+			</div>
 		</div>
 		<div class="inhalt">
 			<table border="1" cellspacing="3px" cellpadding="3px" style="border-spacing: 0pt;" class="specialtable">
@@ -184,7 +187,7 @@ $(function() {
 					<td>50 Euro</td>
 					<td>50.00</td>
 					<td>14.55</td>
-					<td>29.1</td>
+					<td>29.1%</td>
 					<td><div class="neu_button2" rel="#neu2">+</div></td>
 				</tr>
 				<tr>
@@ -221,7 +224,7 @@ $(function() {
 					<td>48 Euro</td>
 					<td>50.00</td>
 					<td>14.55</td>
-					<td>29.1</td>
+					<td>29.1%</td>
 					<td><div class="neu_button2" rel="#neu2">+</div></td>
 				</tr>
 				<tr>
@@ -258,7 +261,7 @@ $(function() {
 					<td>50 Euro</td>
 					<td>50.00</td>
 					<td>14.55</td>
-					<td>29.1</td>
+					<td>29.1%</td>
 					<td><div class="neu_button2" rel="#neu2">+</div></td>
 				</tr>
 				<tr>
@@ -295,7 +298,7 @@ $(function() {
 					<td>69 Euro</td>
 					<td>50.00</td>
 					<td>14.55</td>
-					<td>29.1</td>
+					<td>29.1%</td>
 					<td><div class="neu_button2" rel="#neu2">+</div></td>
 				</tr>
 				<tr>
@@ -332,7 +335,7 @@ $(function() {
 					<td>50 Euro</td>
 					<td>50.00</td>
 					<td>14.55</td>
-					<td>29.1</td>
+					<td>29.1%</td>
 					<td><div class="neu_button2" rel="#neu2">+</div></td>
 				</tr>
 				<tr>
@@ -369,15 +372,10 @@ $(function() {
 					<td>13.7603 Euro</td>
 					<td>50.00</td>
 					<td>14.55</td>
-					<td>29.1</td>
+					<td>29.1%</td>
 					<td><div class="neu_button2" rel="#neu2">+</div></td>
 				</tr>
 			</table>
-		</div>
-		<div class="leiste_unten">
-			<div class="neu_button" rel="#neu">
-				Projekt+
-			</div>
 		</div>
 	</div>
 	<div class="footer">
